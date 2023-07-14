@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Construction Company</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <header class="sticky">
+      <nav>
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+        <img src="logo.png" alt="company logo" class="logo">
+
+        <section class="about">
+            <div class="owner">
+              <img src="ownerImg1.jpg" alt="Owner">
+            </div>
+            <div class="description">
+              <h2>About The Company</h2>
+              <p>Andrey Butnaru specializes in flooring and remodeling homes. He began his business, Floortastic Flooring, in 2018  
+                with the support of his wife and children. He started installing and replacing flooring/ tiling.
+                Over the past 4 years, the services he provides have grown to a wide variety of remodeling and restoration services.                
+              </p>
+              <p>He specializes in providing high-quality services. His customers are pleased with 
+                the communication throughout the whole project. He will be there with you every step of the way.
+              </p>
+              <p></p>
+            </div>
+          </section>
+          <!--
+          <div class="services servicesNav">
+            <section class="hero">
+              <h1 class="servicesTitle">Our Services</h1>
+
+            </section>
+
+            <div class="carousel">
+              <button id="prevBtn" class="carousel-btn">Prev</button>
+              <div class="carousel-content">
+                <img src="trim1.jpeg" alt="Image 1">
+                <img src="trim2.jpeg" alt="Image 2">
+                <img src="trim3.jpeg" alt="Image 3">
+              </div>
+              <button id="nextBtn" class="carousel-btn">Next</button>
+            </div>
+          -->
+
+            <!--
+              <ul>
+                <h4>Our work includes but is not limited to:</h4>
+              <li>Flooring</li>
+              <li>Painting</li>
+              <li>Tiling</li>
+              <li>Electric Work</li>
+              <li>Plumbing</li>
+              <li>Window work/ replacement</li>
+              <li>Decking</li>
+              <li>Fencing</li>
+            </ul>
+            -->
+          </div>
+
+
+      <div class="contact welcomeImgBkg">
+        <h1 class="contact-title" id="contactMeForm">CONTACT US</h1>
+
+        <div class="contact-container">
+          <div class="cnct">
+            <h2>Phone Number:</h2>
+            <p>(417)343-1931</p>
+            <p>(417)379-9532</p>
+            <h2>Email:</h2>
+            <p>floortasticflooring@proton.me</p>
+            <h2> <a href="https://www.facebook.com/Floortastic-Flooring-106107802080853/" target="_blank" class="facebook">
+            Visit Our <img src="facebook.svg" alt="fb icon" class="icons"> Page </a>
+          </div>
+
+        <form class="label-boxes" id="contactForm" name="form" netlify>
+          <div class="label">
+            <p>Name</p>
+          </div>
+          <div class="input">
+            <input id="name" name="name" />
+          </div>
+
+          <div class="label">
+            <p>Message</p>
+          </div>
+          <div class="input">
+            <textarea id="message" name="message"></textarea>
+          </div>
+
+          <p class="request">
+            Please leave either your phone number or email address, and I will
+            respond as soon as possible.
+          </p>
+
+          <div class="label">
+            <p>Phone Number</p>
+          </div>
+          <div class="input">
+            <input id="phone-number" name="number" />
+          </div>
+
+          <div class="label">
+            <p>E-mail Address</p>
+          </div>
+          <div class="input">
+            <input id="email" name="email" />
+          </div>
+
+          <div class="invisible error" id="form-error">
+            An error has occured. Please try again.
+          </div>
+          <div class="submit">
+            <button class="submit-btn" id="submit" type="submit">Submit</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="thankyou invisible" id="thankyou">
+        <div class="img-close">
+          <img src="close.svg" alt="close" class="close" id="close-thank" />
+        </div>
+        <div class="flex-grow">
+          <div class="thank-wrapper">
+            <p class="thank">Thank You!</p>
+            <p class="will-contact">
+              I will contact you as soon as I am available.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+    <footer>
+      <p>&copy; 2023 Construction Company. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
