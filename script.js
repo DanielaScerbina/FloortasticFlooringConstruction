@@ -59,6 +59,18 @@ services.addEventListener("click", () => {
   servicesPageOverlay.classList.remove("invisible");
 });
 
+// exits the services page using any of the nav links
+function removeServicesPageOverlay() {
+  servicesPageOverlay.classList.add("invisible");
+}
+
+if (services.addEventListener("click", removeServicesPageOverlay)) {
+  removeServicesPageOverlay();
+}
+if (contactMe.addEventListener) {
+  removeServicesPageOverlay();
+}
+
 //when click on contact link on the nav, page scrolls to
 contactMe.addEventListener("click", () => {
   contactMeForm.scrollIntoView();
