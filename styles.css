@@ -260,6 +260,16 @@ textarea {
   overflow-y: auto;
 }
 
+.provided-services {
+  margin-left: 50px;
+  text-align: left;
+}
+
+.provided-services li {
+  text-decoration: none;
+  list-style: none;
+}
+
 .servicesNav {
   display: flex;
   justify-content: flex-start;
@@ -270,38 +280,6 @@ textarea {
   height: 30%;
   text-align: center;
   background-color: #f2f2f2;
-}
-
-.carousel {
-  width: 600px;
-  margin: 20px auto;
-  position: relative;
-}
-
-.carousel-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  padding: 10px 20px;
-  background-color: #333;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-}
-
-.carousel-btn:hover {
-  background-color: #555;
-}
-
-.carousel-content {
-  display: flex;
-  overflow: hidden;
-}
-
-.carousel-content img {
-  width: 600px;
-  height: auto;
-  transition: transform 0.3s ease-in-out;
 }
 
 .invisible {

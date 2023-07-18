@@ -1,4 +1,5 @@
 // initalizing variables
+const thankYouOverlay = document.querySelector(".thankyou");
 const contactMe = document.querySelector(".cnct-btn");
 const contactMeForm = document.getElementById("contactMeForm");
 const submitButton = document.querySelector("#submit");
@@ -8,9 +9,6 @@ const number = document.querySelector("#phone-number");
 const email = document.querySelector("#email");
 const error = document.querySelector("#form-error");
 const form = document.querySelector("#contactForm");
-var carouselContent = document.querySelector(".carousel-content");
-var prevBtn = document.getElementById("prevBtn");
-var nextBtn = document.getElementById("nextBtn");
 
 /*contactMe.addEventListener("click", () => {
   contactMeForm.scrollIntoView();
@@ -99,32 +97,3 @@ const closeSecButton = document.querySelector("#close-thank");
 closeSecButton.addEventListener("click", () => {
   thankYouOverlay.classList.add("invisible");
 });
-
-/* Image Carousel
-
-var slideIndex = 0;
-showSlide(slideIndex);
-
-prevBtn.addEventListener("click", function () {
-  showSlide((slideIndex -= 1));
-});
-
-nextBtn.addEventListener("click", function () {
-  showSlide((slideIndex += 1));
-});
-
-function showSlide(index) {
-  var slides = carouselContent.getElementsByTagName("img");
-  var totalSlides = slides.length;
-
-  if (index < 0) {
-    slideIndex = totalSlides - 1;
-  } else if (index >= totalSlides) {
-    slideIndex = 0;
-  }
-
-  for (var i = 0; i < totalSlides; i++) {
-    slides[i].style.transform = "translateX(" + -slideIndex * 600 + "px)";
-  }
-}
-*/
