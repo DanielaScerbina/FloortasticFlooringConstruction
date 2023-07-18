@@ -1,7 +1,9 @@
 // initalizing variables
-const thankYouOverlay = document.querySelector(".thankyou");
-const contactMe = document.querySelector(".cnct-btn");
+const about = document.querySelector(".abtNav");
+const aboutInfo = document.getElementById("aboutInfo");
+const contactMe = document.querySelector(".cnctNav");
 const contactMeForm = document.getElementById("contactMeForm");
+
 const submitButton = document.querySelector("#submit");
 const custName = document.querySelector("#name");
 const message = document.querySelector("#message");
@@ -9,10 +11,17 @@ const number = document.querySelector("#phone-number");
 const email = document.querySelector("#email");
 const error = document.querySelector("#form-error");
 const form = document.querySelector("#contactForm");
+const thankYouOverlay = document.querySelector(".thankyou");
 
-/*contactMe.addEventListener("click", () => {
-  contactMeForm.scrollIntoView();
-});*/
+//when click on about link on the nav, page scrolls to
+about.addEventListener("click", () => {
+  aboutInfo.scrollIntoView(true);
+});
+
+//when click on contact link on the nav, page scrolls to
+contactMe.addEventListener("click", () => {
+  contactMeForm.scrollIntoView(true);
+});
 
 /* can exit thank you page using the esc key*/
 document.addEventListener("keydown", (e) => {
