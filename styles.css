@@ -44,6 +44,12 @@ nav ul li a {
   text-decoration: none;
 }
 
+.abtNav,
+.servicesNav,
+.cnctNav {
+  color: white;
+}
+
 .logo {
   max-width: 100%;
   height: auto;

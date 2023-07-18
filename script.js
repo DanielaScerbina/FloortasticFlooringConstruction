@@ -1,6 +1,10 @@
 // initalizing variables
 const about = document.querySelector(".abtNav");
 const aboutInfo = document.getElementById("aboutInfo");
+
+const services = document.querySelector(".servicesNav");
+const servicesPageOverlay = document.getElementById("servicesPage");
+
 const contactMe = document.querySelector(".cnctNav");
 const contactMeForm = document.getElementById("contactMeForm");
 
@@ -15,12 +19,17 @@ const thankYouOverlay = document.querySelector(".thankyou");
 
 //when click on about link on the nav, page scrolls to
 about.addEventListener("click", () => {
-  aboutInfo.scrollIntoView(true);
+  aboutInfo.scrollIntoView();
+});
+
+//when click on services link on the nav, services page is opened
+services.addEventListener("click", () => {
+  servicesPageOverlay.classList.remove("invisible");
 });
 
 //when click on contact link on the nav, page scrolls to
 contactMe.addEventListener("click", () => {
-  contactMeForm.scrollIntoView(true);
+  contactMeForm.scrollIntoView();
 });
 
 /* can exit thank you page using the esc key*/
