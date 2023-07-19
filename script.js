@@ -54,6 +54,7 @@ about.addEventListener("click", () => {
 // variables and function to make the services nav buttons work
 const services = document.querySelector(".servNav");
 const servicesPageOverlay = document.getElementById("servicesPage");
+
 function servicesPageRemove() {
   servicesPageOverlay.classList.add("invisible");
 }
