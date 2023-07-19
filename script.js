@@ -51,24 +51,25 @@ about.addEventListener("click", () => {
   aboutInfo.scrollIntoView();
 });
 
-// variables and function to make the services nav button work
+// variables and function to make the services nav buttons work
 const services = document.querySelector(".servNav");
 const servicesPageOverlay = document.getElementById("servicesPage");
 function servicesPageRemove() {
   servicesPageOverlay.classList.add("invisible");
 }
+//when click on services link on the nav, page reveals
+services.addEventListener("click", () => {
+  servicesPageOverlay.classList.remove("invisible");
+});
 
-document.addEventListener("click", () => {
+about.addEventListener("click", () => {
   if (servicesPageOverlay === true) {
-    about.addEventListener("click", () => {
-      servicesPageRemove;
-    });
+    servicesPageRemove();
   }
-
+});
+contactMe.addEventListener("click", () => {
   if (servicesPageOverlay === true) {
-    contactMe.addEventListener("click", () => {
-      servicesPageRemove;
-    });
+    servicesPageRemove();
   }
 });
 
