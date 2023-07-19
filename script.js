@@ -61,11 +61,11 @@ function servicesPageRemove() {
 //when click on services link on the nav, services page is opened
 services.addEventListener("click", () => {
   servicesPageOverlay.classList.remove("invisible");
-  if (about.addEventListener("click")) {
+  if (about.addEventListener("click", servicesPageRemove)) {
     servicesPageRemove();
   }
   servicesPageOverlay.classList.remove("invisible");
-  if (contactMe.addEventListener("click")) {
+  if (contactMe.addEventListener("click", servicesPageRemove)) {
     servicesPageRemove();
   }
 });
