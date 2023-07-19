@@ -58,17 +58,19 @@ function servicesPageRemove() {
   servicesPageOverlay.classList.add("invisible");
 }
 
-if (servicesPageOverlay === true) {
-  about.addEventListener("click", () => {
-    servicesPageRemove;
-  });
-}
+document.addEventListener("click", () => {
+  if (servicesPageOverlay === true) {
+    about.addEventListener("click", () => {
+      servicesPageRemove;
+    });
+  }
 
-if (servicesPageOverlay === true) {
-  contactMe.addEventListener("click", () => {
-    servicesPageRemove;
-  });
-}
+  if (servicesPageOverlay === true) {
+    contactMe.addEventListener("click", () => {
+      servicesPageRemove;
+    });
+  }
+});
 
 //when click on contact link on the nav, page scrolls to
 contactMe.addEventListener("click", () => {
