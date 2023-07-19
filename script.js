@@ -2,9 +2,6 @@
 const about = document.querySelector(".abtNav");
 const aboutInfo = document.getElementById("aboutInfo");
 
-const services = document.querySelector(".servNav");
-const servicesPageOverlay = document.getElementById("servicesPage");
-
 const contactMe = document.querySelector(".cnctNav");
 const contactMeForm = document.getElementById("contactMeForm");
 
@@ -54,22 +51,24 @@ about.addEventListener("click", () => {
   aboutInfo.scrollIntoView();
 });
 
-//when click on services link on the nav, services page is opened
-services.addEventListener("click", () => {
-  servicesPageOverlay.classList.remove("invisible");
-});
-
-// exits the services page using any of the nav links
-function removeServicesPageOverlay() {
+// variables and function to make the services nav button work
+const services = document.querySelector(".servNav");
+const servicesPageOverlay = document.getElementById("servicesPage");
+function servicesPageRemove() {
   servicesPageOverlay.classList.add("invisible");
 }
 
-if (services.addEventListener("click", removeServicesPageOverlay)) {
-  removeServicesPageOverlay();
-}
-if (contactMe.addEventListener) {
-  removeServicesPageOverlay();
-}
+//when click on services link on the nav, services page is opened
+services.addEventListener("click", () => {
+  servicesPageOverlay.classList.remove("invisible");
+  if (about.addEventListener("click")) {
+    servicesPageRemove();
+  }
+  servicesPageOverlay.classList.remove("invisible");
+  if (contactMe.addEventListener("click")) {
+    servicesPageRemove();
+  }
+});
 
 //when click on contact link on the nav, page scrolls to
 contactMe.addEventListener("click", () => {
