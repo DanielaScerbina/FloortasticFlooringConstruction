@@ -58,17 +58,17 @@ function servicesPageRemove() {
   servicesPageOverlay.classList.add("invisible");
 }
 
-//when click on services link on the nav, services page is opened
-services.addEventListener("click", () => {
-  servicesPageOverlay.classList.remove("invisible");
-  if (about.addEventListener("click", servicesPageRemove)) {
-    servicesPageRemove();
-  }
-  servicesPageOverlay.classList.remove("invisible");
-  if (contactMe.addEventListener("click", servicesPageRemove)) {
-    servicesPageRemove();
-  }
-});
+if (servicesPageOverlay === true) {
+  about.addEventListener("click", () => {
+    servicesPageRemove;
+  });
+}
+
+if (servicesPageOverlay === true) {
+  contactMe.addEventListener("click", () => {
+    servicesPageRemove;
+  });
+}
 
 //when click on contact link on the nav, page scrolls to
 contactMe.addEventListener("click", () => {
