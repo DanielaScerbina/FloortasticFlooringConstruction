@@ -64,6 +64,11 @@ nav ul li a {
 .intro {
   text-align: center;
   padding: 100px 0;
+  font-weight: 700;
+}
+
+.intro p {
+  font-size: 1.25rem;
   font-weight: 500;
 }
 
