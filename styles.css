@@ -18,9 +18,18 @@ header {
 }
 
 .sticky {
-  position: fixed;
-  top: 0;
+  height: 200px;
   width: 100%;
+}
+
+.logoNav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.logo {
+  height: 175px;
 }
 
 nav {
@@ -50,12 +59,20 @@ nav ul li a {
   color: white;
 }
 
-.logo {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+.intro {
+  text-align: center;
+  padding: 100px 0;
+  font-weight: 500;
+}
+
+.introBkgOpacity {
+  background-image: url(introBkg.jpg);
+  opacity: 0.9;
+}
+
+.intro h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
 }
 
 .main {
