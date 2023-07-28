@@ -9,26 +9,29 @@
   <body>
     <header class="sticky">
       <nav>
-        <div class="logoNav">
-          <img src="smLogo.jpg" alt="company logo" class="logo">
-          <ul>
-            <li class="abtNav">About</li>
-            <li class="servNav">Services/ Projects</li>
-            <li class="cnctNav">Contact Us</li>
-          </ul>
-        </div>
+        <ul>
+          <li class="abtNav">About</li>
+          <li class="servNav">Services/ Projects</li>
+          <li class="cnctNav">Contact Us</li>
+        </ul>
       </nav>
     </header>
 
     <main>
-      <section class="intro introBkgOpacity">
-        <h1>Floortastic Flooring & Construction</h1>
-        <p>Flooring and rennovations that accommodate your needs!</p>
-      </section> 
+      <div class="coverPage">
+        <section class="intro">
+          <div>
+            <h1>Floortastic Flooring & Construction</h1>
+            <h2>Flooring and rennovations that accommodate your needs!</h2>
+          </div>
+          <img src="frontPageImgs\man.png" alt="construction man">
+      </section>
+      </div>
+
       <!--Nav Bar-->
         <section class="about">
             <div class="owner">
-              <img src="ownerImg1.jpg" alt="Owner">
+              <img src="frontPageImgs\ownerImg1.jpg" alt="Owner">
             </div>
             <div class="description" id="aboutInfo">
               <h2>About The Company</h2>
@@ -48,49 +51,51 @@
               <h1 class="servicesTitle">Our Services</h1>
 
             </section>
-            <div class="provided-services">
-              <ul>
-                <h4>Our work includes but is not limited to:</h4>
-                <li>Flooring</li>
-                <li>Painting</li>
-                <li>Tiling</li>
-                <li>Triming</li>
-                <li>Decking/ Fencing</li>
-                <li>Handyman services</li>
-              </ul>
+
+            <div class="split-view">
+              <div class="left-pane">
+                <div class="provided-services">
+                  <ul>
+                    <h4>Our work includes but is not limited to:</h4>
+                    <li>Flooring</li>
+                    <li>Painting</li>
+                    <li>Tiling</li>
+                    <li>Triming</li>
+                    <li>Decking/ Fencing</li>
+                    <li>Handyman services</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="right-pane">
+                <div class="slideshow-container">
+
+                  <div class="mySlides fade">
+                    <img src="Images\trim1.jpeg" class="imgProjects">
+                    <div class="text">Trim Work</div>
+                  </div>
+                  
+                  <div class="mySlides fade">
+                    <img src="Images\trim2.jpeg" class="imgProjects">
+                    <div class="text">Trim Work</div>
+                  </div>
+                  
+                  <div class="mySlides fade">
+                    <img src="Images\trim3.jpeg" class="imgProjects">
+                    <div class="text">Trim Work</div>
+                  </div>
+                  
+                  <a class="prev" onclick="plusSlides(-1)">❮</a>
+                  <a class="next" onclick="plusSlides(1)">❯</a>
+                  
+                  </div>
+                  
+                  <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span> 
+                    <span class="dot" onclick="currentSlide(2)"></span> 
+                    <span class="dot" onclick="currentSlide(3)"></span> 
+                  </div>
+              </div>
             </div>
-
-            <div class="slideshow-container">
-
-              <div class="mySlides fade">
-                <div class="numbertext">1 / 3</div>
-                <img src="trim1.jpeg" class="imgProjects">
-                <div class="text">Triming Work</div>
-              </div>
-              
-              <div class="mySlides fade">
-                <div class="numbertext">2 / 3</div>
-                <img src="trim2.jpeg" class="imgProjects">
-                <div class="text">Triming Work</div>
-              </div>
-              
-              <div class="mySlides fade">
-                <div class="numbertext">3 / 3</div>
-                <img src="trim3.jpeg" class="imgProjects">
-                <div class="text">Triming Work</div>
-              </div>
-              
-              <a class="prev" onclick="plusSlides(-1)">❮</a>
-              <a class="next" onclick="plusSlides(1)">❯</a>
-              
-              </div>
-              
-              <div style="text-align:center">
-                <span class="dot" onclick="currentSlide(1)"></span> 
-                <span class="dot" onclick="currentSlide(2)"></span> 
-                <span class="dot" onclick="currentSlide(3)"></span> 
-              </div>
-              
 
         </div>
     
@@ -106,7 +111,7 @@
             <h2>Email:</h2>
             <p>floortasticflooring@proton.me</p>
             <h2> <a href="https://www.facebook.com/Floortastic-Flooring-106107802080853/" target="_blank" class="facebook">
-            Visit Our <img src="facebook.svg" alt="fb icon" class="icons"> Page </a>
+            Visit Our <img src="frontPageImgs\facebook.svg" alt="fb icon" class="icons"> Page </a>
           </div>
 
         <form class="label-boxes" id="contactForm" name="form" netlify>
@@ -154,7 +159,7 @@
 
       <div class="thankyou invisible" id="thankyou">
         <div class="img-close">
-          <img src="close.svg" alt="close" class="close" id="close-thank" />
+          <img src="frontPageImgs/close.svg" alt="close" class="close" id="close-thank" />
         </div>
         <div class="flex-grow">
           <div class="thank-wrapper">

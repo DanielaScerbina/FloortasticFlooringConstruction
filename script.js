@@ -48,7 +48,11 @@ function showSlides(n) {
 
 //when click on about link on the nav, page scrolls to
 about.addEventListener("click", () => {
-  aboutInfo.scrollIntoView();
+  aboutInfo.scrollIntoView({
+    behavior: "smooth",
+    block: "center",
+    inline: "center",
+  });
 });
 
 // variables and function to make the services nav buttons work
@@ -75,8 +79,11 @@ contactMe.addEventListener("click", () => {
 });
 
 //when click on contact link on the nav, page scrolls to
+const contactOffset = 60;
 contactMe.addEventListener("click", () => {
-  contactMeForm.scrollIntoView();
+  contactMeForm.scrollIntoView({
+    behavior: "smooth",
+  });
 });
 
 /* can exit thank you page using the esc key*/
@@ -131,7 +138,7 @@ form.addEventListener("submit", (event) => {
 
   // replaces word submit on the submit button with an svg of a loading icon
   const loadingImg = document.createElement("img");
-  loadingImg.setAttribute("src", "./bubble-loading.svg");
+  loadingImg.setAttribute("src", "frontPageImgs\bubble-loading.svg");
   submitButton.innerHTML = "";
   submitButton.appendChild(loadingImg);
 
