@@ -481,3 +481,32 @@ footer {
   padding: 10px;
   text-align: center;
 }
+
+@media (max-width: 700px) {
+  .intro {
+    width: 100%;
+  }
+
+  .man {
+    height: 85%;
+  }
+
+  .cnct,
+  .label-boxes {
+    width: 90%;
+  }
+
+  .servicesTitle {
+    font-size: 3rem;
+  }
+
+  .about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .description h2 {
+    text-align: center;
+  }
+}
