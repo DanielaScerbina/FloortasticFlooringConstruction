@@ -14,7 +14,7 @@ header {
   background-color: #44693d;
   padding: 10px;
   text-align: center;
-  height: 50px;
+  height: 100px;
 }
 
 .sticky {
@@ -23,8 +23,13 @@ header {
   width: 100%;
 }
 
-.coverPage {
-  background-image: url(fullCoverImg.jpg);
+.logoImg {
+  height: auto;
+  width: 100%;
+}
+
+/*.coverPage {
+  background-image: url(LGlogo.png);
   background-repeat: no-repeat;
   background-size: cover;
   image-rendering: -webkit-optimize-contrast;
@@ -52,10 +57,18 @@ header {
 
 .intro h2 {
   font-weight: 100;
-}
+}*/
 
 nav {
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navLogo {
+  height: 75px;
+  width: auto;
 }
 
 nav ul {
@@ -75,6 +88,7 @@ nav ul li a {
   text-decoration: none;
 }
 
+.homeNav,
 .abtNav,
 .servNav,
 .cnctNav {

@@ -1,8 +1,12 @@
 // initalizing variables
 const about = document.querySelector(".abtNav");
+const abtNav = document.getElementById("abt");
 const aboutInfo = document.getElementById("aboutInfo");
 
+const services = document.querySelector(".servNav");
+
 const contactMe = document.querySelector(".cnctNav");
+const cnctNav = document.getElementById("cnct");
 const contactMeForm = document.getElementById("contactMeForm");
 
 const submitButton = document.querySelector("#submit");
@@ -55,36 +59,34 @@ about.addEventListener("click", () => {
   });
 });
 
-// variables and function to make the services nav buttons work
-const services = document.querySelector(".servNav");
-const servicesPageOverlay = document.getElementById("servicesPage");
-
-function servicesPageRemove() {
-  servicesPageOverlay.classList.add("invisible");
-}
 //when click on services link on the nav, page reveals
 services.addEventListener("click", () => {
-  servicesPageOverlay.classList.remove("invisible");
-});
-
-about.addEventListener("click", () => {
-  if (servicesPageOverlay === true) {
-    servicesPageRemove();
-  }
-});
-contactMe.addEventListener("click", () => {
-  if (servicesPageOverlay === true) {
-    servicesPageRemove();
-  }
+  servPgOverlay.classList.remove("invisible");
 });
 
 //when click on contact link on the nav, page scrolls to
-const contactOffset = 60;
 contactMe.addEventListener("click", () => {
   contactMeForm.scrollIntoView({
     behavior: "smooth",
   });
 });
+
+// variables and function to make the services nav buttons work
+const servPgOverlay = document.getElementById("servicesPage");
+
+abtNav.addEventListener("click", function () {
+  removeOverlay();
+});
+
+cnctNav.addEventListener("click", function () {
+  removeOverlay();
+});
+
+function removeOverlay() {
+  if (servPgOverlay.classList.contains("servPgOverlay")) {
+    overlay.classList.add("invisible");
+  }
+}
 
 /* can exit thank you page using the esc key*/
 document.addEventListener("keydown", (e) => {
