@@ -23,12 +23,16 @@ header {
   width: 100%;
 }
 
-.logoImg {
+/*.LGlogoImg {
   height: auto;
   width: 100%;
 }
+.MDlogoImg,
+.SMlogoImg {
+  display: none;
+}*/
 
-/*.coverPage {
+.coverPage {
   background-image: url(LGlogo.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -37,7 +41,7 @@ header {
   display: flex;
 }
 
-.intro {
+/*.intro {
   width: 75%;
   height: 27%;
   padding: 20px;
@@ -488,6 +492,12 @@ footer {
   text-align: center;
 }
 
+@media (max-width: 1000px) {
+  .coverPage {
+    background-image: url(MDlogo.png);
+  }
+}
+
 @media (max-width: 800px) {
   /* inline block prevents body 
   white space shrinking when screen size gets smaller*/
@@ -530,5 +540,11 @@ footer {
 
   .description h2 {
     text-align: center;
+  }
+}
+
+@media (max-width: 700px) {
+  .coverPage {
+    background-image: url(SMlogo.png);
   }
 }
