@@ -1,4 +1,6 @@
 // initalizing variables
+const home = document.querySelector(".homeNav");
+
 const about = document.querySelector(".abtNav");
 const abtNav = document.getElementById("abt");
 const aboutInfo = document.getElementById("aboutInfo");
@@ -18,7 +20,7 @@ const error = document.querySelector("#form-error");
 const form = document.querySelector("#contactForm");
 const thankYouOverlay = document.querySelector(".thankyou");
 
-//image carousel
+/*image carousel
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -48,7 +50,16 @@ function showSlides(n) {
   }
   slides[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].className += " active";
-}
+}*/
+
+//
+home.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: "smooth",
+  });
+});
 
 //when click on about link on the nav, page scrolls to
 about.addEventListener("click", () => {
