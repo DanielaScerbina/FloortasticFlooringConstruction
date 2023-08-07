@@ -442,6 +442,10 @@ footer {
   .description h2 {
     text-align: center;
   }
+
+  .contact-container {
+    width: 90;
+  }
 }
 
 @media (max-width: 700px) {
