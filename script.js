@@ -20,39 +20,7 @@ const error = document.querySelector("#form-error");
 const form = document.querySelector("#contactForm");
 const thankYouOverlay = document.querySelector(".thankyou");
 
-/*image carousel
-let slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides((slideIndex += n));
-}
-
-function currentSlide(n) {
-  showSlides((slideIndex = n));
-}
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {
-    slideIndex = 1;
-  }
-  if (n < 1) {
-    slideIndex = slides.length;
-  }
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].className += " active";
-}*/
-
-//
+//home button on nav brings it back to the top
 home.addEventListener("click", () => {
   window.scrollTo({
     top: 0,
@@ -84,6 +52,11 @@ contactMe.addEventListener("click", () => {
 
 // variables and function to make the services nav buttons work
 const servPgOverlay = document.getElementById("servicesPage");
+function removeOverlay() {
+  if (servPgOverlay.classList.contains("servPgOverlay")) {
+    servPgOverlay.classList.toggle("invisible");
+  }
+}
 
 abtNav.addEventListener("click", function () {
   removeOverlay();
@@ -92,12 +65,6 @@ abtNav.addEventListener("click", function () {
 cnctNav.addEventListener("click", function () {
   removeOverlay();
 });
-
-function removeOverlay() {
-  if (servPgOverlay.classList.contains("servPgOverlay")) {
-    overlay.classList.add("invisible");
-  }
-}
 
 /* can exit thank you page using the esc key*/
 document.addEventListener("keydown", (e) => {
