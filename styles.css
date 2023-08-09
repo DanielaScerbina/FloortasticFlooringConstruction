@@ -267,7 +267,7 @@ textarea {
 .thankyou {
   position: fixed;
   height: 100%;
-  top: 35px;
+  top: 100px;
   left: 0;
   background-color: #fff;
   z-index: 1;
@@ -275,9 +275,6 @@ textarea {
   justify-content: center;
   align-items: center;
   overflow-y: auto;
-}
-.services {
-  top: 100px;
 }
 .subtitle {
   margin-top: 25px;
