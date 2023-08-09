@@ -1,4 +1,397 @@
-/* Reset default styles */
+/* Minified CSS */
+*,
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+.coverPage,
+.welcomeImgBkg {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.description ul,
+.facebook,
+nav ul li a {
+  text-decoration: none;
+}
+.cnct,
+.contact-title,
+.error,
+.welcome,
+header {
+  text-align: center;
+}
+.cnct,
+.label-boxes {
+  background-color: #d3d3d3ab;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.about,
+.contact,
+.contact-container,
+.coverPage,
+.servicesNav,
+.submit,
+nav {
+  display: flex;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+}
+header {
+  background-color: #44693d;
+  padding: 10px;
+  height: 100px;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.coverPage {
+  background-image: url(LGlogo.svg);
+  image-rendering: -webkit-optimize-contrast;
+  height: 100vh;
+}
+nav {
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.navLogo {
+  height: 75px;
+  width: auto;
+}
+nav ul {
+  list-style-type: none;
+  font-weight: 700;
+}
+nav ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+nav ul li a {
+  color: #fff;
+  font-weight: 600;
+}
+.abtNav,
+.cnctNav,
+.homeNav,
+.servNav {
+  color: #fff;
+}
+.contact-title,
+.servicesTitle {
+  color: #507d2a;
+  font-weight: 900;
+}
+.main {
+  max-width: 960px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+.welcome {
+  padding: 100px 0;
+}
+.welcome h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+.about {
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
+.owner {
+  margin-right: 20px;
+}
+.owner img {
+  width: 200px;
+  border-radius: 50%;
+  margin: 50px;
+}
+.cnct h2,
+.cnct p,
+.description h2 {
+  margin-bottom: 10px;
+}
+.description {
+  max-width: 600px;
+}
+.description img {
+  height: 2rem;
+  margin-top: 10px;
+}
+.description h2 {
+  font-size: 24px;
+}
+.description p {
+  font-size: 16px;
+}
+.description h4 {
+  font-weight: 500;
+}
+.description ul {
+  list-style: none;
+  padding: 10px;
+}
+.welcomeImgBkg {
+  background-image: url(frontPageImgs/coverImg2.jpg);
+}
+.ownerImg {
+  max-height: 50vh;
+}
+.contact {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  scroll-padding-top: 60px;
+}
+.contact-title {
+  font-size: 3rem;
+  padding: 0 10px 20px;
+}
+.servicesTitle {
+  font-size: 6rem;
+}
+.label,
+.request {
+  font-weight: 600;
+}
+.contact-container {
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  width: 75%;
+}
+.close,
+.icons {
+  height: 2rem;
+}
+.facebook {
+  color: #000;
+}
+.cnct {
+  width: 75%;
+  padding: 20px;
+}
+.cnct h2 {
+  font-size: 20px;
+}
+.cnct p {
+  font-size: 16px;
+}
+.label-boxes {
+  width: 75%;
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+.label {
+  color: #000;
+  font-size: 1rem;
+  width: 100%;
+  padding: 0.5rem;
+}
+.input {
+  padding: 10px;
+  border: 1px solid rgba(11, 85, 85, 0.2);
+  box-shadow: 0 3px 4px rgba(163, 163, 163, 0.44);
+  border-radius: 1rem;
+}
+.input,
+input,
+textarea {
+  background: #eee;
+}
+.input textarea {
+  height: 250px;
+}
+.input input,
+.input textarea {
+  width: 100%;
+  font-size: 1rem;
+  border: none;
+}
+.request {
+  color: #333;
+  font-size: 0.8rem;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+.error,
+.thank {
+  font-weight: 500;
+}
+.submit {
+  align-items: center;
+  justify-content: center;
+}
+.hero,
+.services,
+.thankyou {
+  width: 100%;
+  flex-direction: column;
+}
+.submit-btn {
+  background: #44693d;
+  border-radius: 1rem;
+  font-size: 1rem;
+  color: #fff;
+  padding: 25px 40px;
+  margin: 40px;
+}
+.submit-btn:disabled {
+  background: grey;
+  cursor: not-allowed;
+}
+.error {
+  color: #d42424;
+  padding-top: 4rem;
+  font-size: 2rem;
+}
+.thank,
+.will-contact {
+  color: #44693d;
+  font-size: 2.5rem;
+  text-align: center;
+}
+.services,
+.thankyou {
+  position: fixed;
+  height: 100%;
+  top: 35px;
+  left: 0;
+  background-color: #fff;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+}
+.services {
+  top: 100px;
+}
+.subtitle {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+.lgServ {
+  width: 100%;
+  margin-bottom: 100px;
+}
+.servicesNav {
+  justify-content: flex-start;
+}
+.invisible,
+.mobileServ {
+  display: none;
+}
+.hero {
+  height: 50%;
+  text-align: center;
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.img-close {
+  padding-top: 120px;
+  padding-right: 25px;
+  align-self: flex-end;
+}
+.thank-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding-bottom: 386px;
+}
+.thank {
+  font-family: Inter, sans-serif;
+  border-bottom: 2px solid #bebebe;
+  padding: 125px 70px 20px;
+}
+.will-contact {
+  padding-top: 50px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+@media (max-width: 1100px) {
+  .coverPage {
+    background-image: url(MDlogo.svg);
+  }
+}
+@media (max-width: 800px) {
+  .description,
+  .description h2,
+  .provided-services ul {
+    text-align: center;
+  }
+  body {
+    display: inline-block;
+  }
+  .intro {
+    width: 100%;
+    height: 40%;
+  }
+  .man {
+    height: 75%;
+  }
+  .cnct,
+  .contact-container,
+  .label-boxes {
+    width: 90%;
+  }
+  .servicesTitle {
+    font-size: 3rem;
+  }
+  .about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .description {
+    padding: 25px;
+  }
+}
+@media (max-width: 700px) {
+  .coverPage {
+    background-image: url(SMlogo.svg);
+  }
+}
+@media (max-width: 550px) {
+  .coverPage {
+    background-image: url(mobileLogo.svg);
+  }
+  .subtitle {
+    font-size: 1rem;
+  }
+  .lgServ {
+    display: none;
+  }
+  .mobileServ {
+    display: block;
+    width: 100%;
+    margin-bottom: 100px;
+  }
+}
+
+/* Reset default styles 
 * {
   margin: 0;
   padding: 0;
@@ -386,7 +779,7 @@ footer {
 
 @media (max-width: 800px) {
   /* inline block prevents body 
-  white space shrinking when screen size gets smaller*/
+  white space shrinking when screen size gets smaller
   body {
     display: inline-block;
   }
@@ -455,3 +848,4 @@ footer {
     margin-bottom: 100px;
   }
 }
+*/

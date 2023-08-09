@@ -1,4 +1,92 @@
-// initalizing variables
+//minified JS
+var home = document.querySelector(".homeNav"),
+  about = document.querySelector(".abtNav"),
+  abtNav = document.getElementById("abt"),
+  aboutInfo = document.getElementById("aboutInfo"),
+  services = document.querySelector(".servNav"),
+  contactMe = document.querySelector(".cnctNav"),
+  cnctNav = document.getElementById("cnct"),
+  contactMeForm = document.getElementById("contactMeForm"),
+  submitButton = document.querySelector("#submit"),
+  custName = document.querySelector("#name"),
+  message = document.querySelector("#message"),
+  number = document.querySelector("#phone-number"),
+  email = document.querySelector("#email"),
+  error = document.querySelector("#form-error"),
+  form = document.querySelector("#contactForm"),
+  thankYouOverlay = document.querySelector(".thankyou");
+home.addEventListener("click", function () {
+  window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+});
+about.addEventListener("click", function () {
+  aboutInfo.scrollIntoView({
+    behavior: "smooth",
+    block: "center",
+    inline: "center",
+  });
+});
+contactMe.addEventListener("click", function () {
+  contactMeForm.scrollIntoView({ behavior: "smooth" });
+});
+document.addEventListener("keydown", function (a) {
+  "Escape" === a.key && thankYouOverlay.classList.add("invisible");
+});
+var isValid = function () {
+    return (
+      0 < custName.value.length &&
+      0 < message.value.length &&
+      (0 < email.value.length || 0 < number.value.length)
+    );
+  },
+  inputCheck = function () {
+    isValid()
+      ? submitButton.removeAttribute("disabled")
+      : submitButton.setAttribute("disabled", !0);
+  };
+inputCheck();
+custName.addEventListener("input", function () {
+  inputCheck();
+});
+message.addEventListener("input", function () {
+  inputCheck();
+});
+number.addEventListener("input", function () {
+  inputCheck();
+});
+email.addEventListener("input", function () {
+  inputCheck();
+});
+form.addEventListener("submit", function (a) {
+  a.preventDefault();
+  a = new FormData(a.target);
+  submitButton.setAttribute("disabled", !0);
+  var b = document.createElement("img");
+  b.setAttribute("src", "frontPageImgs\bubble-loading.svg");
+  submitButton.innerHTML = "";
+  submitButton.appendChild(b);
+  fetch("/", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams(a).toString(),
+  })
+    .then(function () {
+      thankYouOverlay.classList.remove("invisible");
+    })
+    ["catch"](function (c) {
+      console.error(c);
+      error.classList.remove("invisible");
+    })
+    ["finally"](function () {
+      submitButton.removeAttribute("disabled");
+      submitButton.innerHTML = "Submit";
+    });
+});
+var closeSecButton = document.querySelector("#close-thank");
+closeSecButton.addEventListener("click", function () {
+  thankYouOverlay.classList.add("invisible");
+});
+
+/* initalizing variables
 const home = document.querySelector(".homeNav");
 
 const about = document.querySelector(".abtNav");
@@ -45,7 +133,7 @@ contactMe.addEventListener("click", () => {
   });
 });
 
-/* can exit thank you page using the esc key*/
+/* can exit thank you page using the esc key
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") {
     thankYouOverlay.classList.add("invisible");
@@ -55,7 +143,7 @@ document.addEventListener("keydown", (e) => {
 /*disables button until text is typed into name & message input 
     areas (the 'required' fields),and checks if there is text in 
     either the phone or email text area,then enables, 
-    then disables again when text is deleted.*/
+    then disables again when text is deleted.
 const isValid = () => {
   return (
     custName.value.length > 0 &&
@@ -128,3 +216,4 @@ const closeSecButton = document.querySelector("#close-thank");
 closeSecButton.addEventListener("click", () => {
   thankYouOverlay.classList.add("invisible");
 });
+*/
