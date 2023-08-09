@@ -38,32 +38,11 @@ about.addEventListener("click", () => {
   });
 });
 
-//when click on services link on the nav, page reveals
-services.addEventListener("click", () => {
-  servPgOverlay.classList.remove("invisible");
-});
-
 //when click on contact link on the nav, page scrolls to
 contactMe.addEventListener("click", () => {
   contactMeForm.scrollIntoView({
     behavior: "smooth",
   });
-});
-
-// variables and function to make the services nav buttons work
-const servPgOverlay = document.getElementById("servicesPage");
-function removeOverlay() {
-  if (servPgOverlay.classList.contains("servPgOverlay")) {
-    servPgOverlay.classList.toggle("invisible");
-  }
-}
-
-abtNav.addEventListener("click", function () {
-  removeOverlay();
-});
-
-cnctNav.addEventListener("click", function () {
-  removeOverlay();
 });
 
 /* can exit thank you page using the esc key*/
